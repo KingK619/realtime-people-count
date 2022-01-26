@@ -1,19 +1,13 @@
-import smtplib, ssl
+import smtplib
+import ssl
+
 
 class Mailer:
 
-    """
-    This script initiaties the email alert function.
-
-    """
     def __init__(self):
-        # Enter your email below. This email will be used to send alerts.
-        # E.g., "email@gmail.com"
+
         self.EMAIL = ""
-        # Enter the email password below. Note that the password varies if you have secured
-        # 2 step verification turned on. You can refer the links below and create an application specific password.
-        # Google mail has a guide here: https://myaccount.google.com/lesssecureapps
-        # For 2 step verified accounts: https://support.google.com/accounts/answer/185833
+
         self.PASS = ""
         self.PORT = 465
         self.server = smtplib.SMTP_SSL('smtp.gmail.com', self.PORT)
